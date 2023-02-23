@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    {% for cake in cakes %}
+        <em><h2>{{cake.cake_type}}</h2></em>
+        <p><strong>{{cake.availability}}</strong></p>
+        <p>{{cake.Best_Before}}</p>
+        {% if cake.in_stock == True %}
+            <p>In stock</p>
+        {% else %}
+            <p>Out stock</p>
+        {% endif %}
+    {% endfor %}
+{% endblock content %}

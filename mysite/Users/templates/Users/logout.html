@@ -1,0 +1,18 @@
+{% extends "/home/marwa254/Desktop/DELIGHT/mysite/delight_Cakehouse/templates/base.html" %}
+
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="content-section">
+        <form method="post">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4"><h2>Leaving so soon?</h2></legend>
+                <div class="border-top pt-3">
+                    <small class="text-muted">
+                            <a class="ml-2" href="{%url 'Log In'%}"><h4>Sign in Again?</h4></a> 
+                    </small>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+{% endblock content %}
