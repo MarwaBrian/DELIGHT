@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import UserRegisterForm
 from django.contrib.auth.decorators import login_required
+from .models import Profile
 
 def register(request):
     #use django's  own form
@@ -14,6 +15,7 @@ def register(request):
             username = form.cleaned_data.get('username')
             messages.success(request, f'Account created for {username}!')
             return redirect('home')
+        """ profile = UserProfile() """ 
     else:
         form = UserRegisterForm()
     return render(request, "/home/marwa254/Desktop/DELIGHT/mysite/Users/templates/Users/register.html", {'form':form})
@@ -21,4 +23,8 @@ def register(request):
 
 @login_required
 def profile(request):
-    return render(request, "/home/marwa254/Desktop/DELIGHT/mysite/Users/templates/Users/profile.html" )
+    Context = {
+        "Details" : Profile.objects.all
+    }
+    return render(request, "/home/marwa254/Desktop/DELIGHT/mysite/Users/templates/Users/profile.html", Context )
+
