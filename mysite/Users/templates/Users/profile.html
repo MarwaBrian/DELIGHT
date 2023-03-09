@@ -1,10 +1,15 @@
 {% extends "/home/marwa254/Desktop/DELIGHT/mysite/delight_Cakehouse/templates/base.html" %}
 {% block content %}
-    {% for Detail in Details %}
-        <h4>Detail.Bio</h4>
-        <h4>Detail.Dp</h4>
-        <h4>Detail.Nickname</h4>
-    {% endfor %}
-    <h2 style="color: rgba(10, 0, 5, 0.938);"><p><strong> Complete your profile for a onetime 20% OFF Coupon!! </strong> </p></h2>
-    {% endblock content %}
+    <div class="content-section">
+        <div class="media">
+            <!-- instead of hardcoding we can link the src to the path of the users profile image to cater for the instance they update their image. -->
+        <img class="rounded-circle account-img"src="{{ user.profile.image.url }}">
+            <div class="media-body">
+                <h2 class="account-heading">{{user.username}}</h2>
+                <p class="text-secondary">{{user.email}}</p>
+            </div>
+        </div>
+        <!-- FORM HERE -->
+    </div>    
+{% endblock content %}
 

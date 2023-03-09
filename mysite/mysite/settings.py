@@ -112,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Africa/Nairobi"
 
 USE_I18N = True
 
@@ -148,4 +148,4 @@ CRISPY_TEMPLATE_PACK = 'bootstrap5'
 LOGIN_REDIRECT_URL = "home"
  
 MEDIA_URL = os.path.join(BASE_DIR, 'media/')
-MEDIA_ROOT = "/media/"
+MEDIA_ROOT = BASE_DIR.joinpath('media')
