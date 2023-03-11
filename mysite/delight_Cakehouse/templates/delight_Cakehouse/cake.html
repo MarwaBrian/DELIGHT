@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     {% for cake in cakes %}
-    <img src="{{cake.Image.url}}">
+    <img class="w3-round-xlarge article-img" src="{{cake.Image.url}}" >
     <em><h2>{{cake.cake_type}}</h2></em>
         <h5><p>Left in stock -<strong> {{cake.availability}}</strong></p></h5>
         <h8>{{cake.Best_Before}}</h8>

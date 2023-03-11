@@ -17,11 +17,11 @@ body {
   }
   
   .bg-steel {
-    background-color: #e915bb;
+    background-color: #eb299a;
   }
   
   .site-header .navbar-nav .nav-link {
-    color: #cbd5db;
+    color: #fffffd;
   }
   
   .site-header .navbar-nav .nav-link:hover {
@@ -54,9 +54,9 @@ body {
   }
   
   .article-img {
-    height: 65px;
-    width: 65px;
-    margin-right: 16px;
+    height: 95px;
+    width: 80px;
+    margin-right: 20px;
   }
   
   .article-metadata {
